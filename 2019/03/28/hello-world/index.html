@@ -15,7 +15,7 @@
 <meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-03-28T17:12:13.460Z">
+<meta property="og:updated_time" content="2019-03-29T15:50:44.882Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hello World">
 <meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
@@ -120,6 +120,10 @@
             <div class="navbar-end">
                 
                 
+                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
                 
                 <a class="navbar-item search" title="搜索" href="javascript:;">
                     <i class="fas fa-search"></i>
@@ -177,7 +181,14 @@
         
         
         
-        <div class="social-share"></div>
+        <div class="social-share" data-initialized="true">
+    <a href="#" class="social-share-icon icon-wechat"></a>
+    <a href="#" class="social-share-icon icon-weibo"></a>
+    <a href="#" class="social-share-icon icon-qq"></a>
+    <a href="#" class="social-share-icon icon-qzone"></a>
+    <a href="#" class="social-share-icon icon-facebook"></a>
+    <a href="#" class="social-share-icon icon-google"></a>
+</div>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css">
 <script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
         
@@ -185,40 +196,6 @@
 </div>
 
 
-
-<div class="card">
-    <div class="card-content">
-        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
-        <div class="buttons is-centered">
-            
-                
-<div class="notification is-danger">
-    You forgot to set the <code>qrcode</code> for Alipay. Please set it in <code>_config.yml</code>.
-</div>
-
-                
-                
-<div class="notification is-danger">
-    You forgot to set the <code>qrcode</code> for Wechat. Please set it in <code>_config.yml</code>.
-</div>
-
-                
-                <!-- Visit https://www.paypal.com/donate/buttons/ to get your donate button -->
-
-<div class="notification is-danger">
-    You forgot to set the <code>business</code> and <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.
-</div>
-
-                
-                
-<div class="notification is-danger">
-    You forgot to set the <code>url</code> Patreon. Please set it in <code>_config.yml</code>.
-</div>
-
-                
-        </div>
-    </div>
-</div>
 
 
 
@@ -237,6 +214,27 @@
 </div>
 
 
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">评论</h3>
+        
+<div id="valine-thread" class="content"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#valine-thread' ,
+        notify: false,
+        verify: false,
+        app_id: 'W4nIjizRfXDBQKOYrrg1pVw6-gzGzoHsz',
+        app_key: 'ETPjN9lCHIobJ4sHksV5beQG',
+        placeholder: '欢迎探讨评论 ... ...'
+    });
+</script>
+
+    </div>
+</div>
 </div>
                 
 
@@ -252,7 +250,9 @@
             <div class="level-item has-text-centered">
                 <div>
                     
-                        <img class="image is-128x128 has-mb-6" src="/images/avatar.GIF" alt="xhBruce">
+                        <figure class="image container is-128x128 has-mb-6">
+                            <img class="is-rounded" src="/images/avatar.GIF" alt="xhBruce">
+                        </figure>
                     
                     
                     <p class="is-size-4 is-block">
@@ -267,7 +267,7 @@
                     
                     <p class="is-size-6 is-flex is-flex-center has-text-grey">
                         <i class="fas fa-map-marker-alt has-mr-7"></i>
-                        <span>武汉</span>
+                        <span>宇宙 - 银河系 - 太阳系 - 地球</span>
                     </p>
                     
                 </div>
@@ -306,8 +306,8 @@
             </div>
         </nav>
         <div class="level">
-            <a class="level-item button is-link is-rounded" href="https://github.com/xhBruce" target="_blank">
-                关注我</a>
+            <a class="level-item button is-link is-rounded" href="https://blog.csdn.net/qq_23452385" target="_blank">
+                关注我的 CSDN</a>
         </div>
         
         
@@ -316,18 +316,6 @@
             <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/xhBruce">
                 
                 <i class="fab fa-github"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="CSDN" href="https://blog.csdn.net/qq_23452385">
-                
-                <i class="fab fa-csdn"></i>
-                
-            </a>
-            
-            <a class="level-item button is-white is-marginless" target="_blank" title="Dribbble" href="http://dribbble.com">
-                
-                <i class="fab fa-dribbble"></i>
                 
             </a>
             
@@ -341,8 +329,6 @@
         
     </div>
 </div>
-    
-        
     
         
 
@@ -366,12 +352,56 @@
             </li>
         
             <li>
-                <a class="level is-mobile" href="https://github.com/ppoffice" target="_blank">
+                <a class="level is-mobile" href="http://gityuan.com/" target="_blank">
                     <span class="level-left">
-                        <span class="level-item">PPOffice</span>
+                        <span class="level-item">Gityuan</span>
                     </span>
                     <span class="level-right">
-                        <span class="level-item tag">github.com</span>
+                        <span class="level-item tag">gityuan.com</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="http://liuwangshu.cn/" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">刘望舒</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">liuwangshu.cn</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="http://www.trinea.cn/" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">Trinea</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">www.trinea.cn</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="https://blog.csdn.net/guolin_blog" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">郭霖</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">blog.csdn.net</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="https://blog.csdn.net/googdev" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">stormzhangV</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">blog.csdn.net</span>
                     </span>
                 </a>
             </li>
@@ -553,6 +583,39 @@
             </div>
         </article>
         
+    </div>
+</div>
+
+        
+            
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                目录
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#Quick-Start">
+        <span class="has-mr-6">1</span>
+        <span>Quick Start</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#Create-a-new-post">
+        <span class="has-mr-6">1.1</span>
+        <span>Create a new post</span>
+        </a></li><li>
+        <a class="is-flex" href="#Run-server">
+        <span class="has-mr-6">1.2</span>
+        <span>Run server</span>
+        </a></li><li>
+        <a class="is-flex" href="#Generate-static-files">
+        <span class="has-mr-6">1.3</span>
+        <span>Generate static files</span>
+        </a></li><li>
+        <a class="is-flex" href="#Deploy-to-remote-sites">
+        <span class="has-mr-6">1.4</span>
+        <span>Deploy to remote sites</span>
+        </a></li></ul></li></ul>
+        </div>
     </div>
 </div>
 
@@ -779,6 +842,39 @@
             </div>
         </article>
         
+    </div>
+</div>
+
+    
+        
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                目录
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#Quick-Start">
+        <span class="has-mr-6">1</span>
+        <span>Quick Start</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#Create-a-new-post">
+        <span class="has-mr-6">1.1</span>
+        <span>Create a new post</span>
+        </a></li><li>
+        <a class="is-flex" href="#Run-server">
+        <span class="has-mr-6">1.2</span>
+        <span>Run server</span>
+        </a></li><li>
+        <a class="is-flex" href="#Generate-static-files">
+        <span class="has-mr-6">1.3</span>
+        <span>Generate static files</span>
+        </a></li><li>
+        <a class="is-flex" href="#Deploy-to-remote-sites">
+        <span class="has-mr-6">1.4</span>
+        <span>Deploy to remote sites</span>
+        </a></li></ul></li></ul>
+        </div>
     </div>
 </div>
 
