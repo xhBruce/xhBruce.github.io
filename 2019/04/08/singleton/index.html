@@ -2,19 +2,24 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>归档: 2018/10 - 许浑的博客</title>
+<title>Java设计模式 —— 单例模式(Singleton) - 许浑的博客</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="许浑的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2018/10/index.html">
+    <meta name="description" content="单例模式最初的定义出现于《设计模式》（艾迪生维斯理, 1994）：“保证一个类仅有一个实例，并提供一个访问它的全局访问点。”">
+<meta name="keywords" content="设计模式,Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java设计模式 —— 单例模式(Singleton)">
+<meta property="og:url" content="http://yoursite.com/2019/04/08/singleton/index.html">
 <meta property="og:site_name" content="许浑的博客">
+<meta property="og:description" content="单例模式最初的定义出现于《设计模式》（艾迪生维斯理, 1994）：“保证一个类仅有一个实例，并提供一个访问它的全局访问点。”">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
+<meta property="og:updated_time" content="2019-04-08T13:52:46.577Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="许浑的博客">
+<meta name="twitter:title" content="Java设计模式 —— 单例模式(Singleton)">
+<meta name="twitter:description" content="单例模式最初的定义出现于《设计模式》（艾迪生维斯理, 1994）：“保证一个类仅有一个实例，并提供一个访问它的全局访问点。”">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
 
 
@@ -93,7 +98,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/xhbruce-logo.png" alt="许浑的博客" height="28">
+                <img src="/images/xhbruce-logo.png" alt="Java设计模式 —— 单例模式(Singleton)" height="28">
             
             </a>
         </div>
@@ -129,39 +134,148 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
-
-<div class="card widget">
-    <div class="card-content">
-        <h3 class="tag is-link">
-        十月 2018
-        </h3>
-        <div class="timeline">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
         
-            <article class="media">
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-04-08T13:33:00.000Z">2019-04-08</time>
                 
-                <div class="media-content">
-                    <div class="content">
-                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2018-10-17T19:13:56.000Z">2018-10-18</time>
-                        <a href="/2018/10/18/wordpress个人博客（阿里服务器）/" class="has-link-black-ter is-size-6"> wordpress个人博客（阿里服务器）		</a>
-                        <div class="level article-meta is-mobile">
-                            <div class="level-left">
-                                
-                                <div class="level-item is-size-7 is-uppercase">
-                                <a class="has-link-grey -link" href="/categories/个人网站/">个人网站</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Java/">Java</a>
                 </div>
-            </article>
-        
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    5 分钟 读完 (大约 702 个字)
+                </span>
+                
+                
+                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-eye"></i>
+                    <span id="busuanzi_value_page_pv">0</span>次访问
+                </span>
+                
+            </div>
         </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                Java设计模式 —— 单例模式(Singleton)
+            
+        </h1>
+        <div class="content">
+            <blockquote>
+<p>单例模式最初的定义出现于《设计模式》（艾迪生维斯理, 1994）：“保证一个类仅有一个实例，并提供一个访问它的全局访问点。”</p>
+</blockquote>
+<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a><a id="more"></a>定义</h2><p>Java中单例模式定义：“一个类有且仅有一个实例，并且自行实例化向整个系统提供。”</p>
+<blockquote>
+<p>特征：</p>
+<ul>
+<li>只有一个实例对象，private构造函数</li>
+<li>提供一个公有的方法获取实例对象，static getInstance方法</li>
+</ul>
+</blockquote>
+<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><blockquote>
+<p>饿汉模式 —— 没有 getInstance 获取实例对象，就已经new对象，加载类的时候就构造了单例<br>懒汉模式 —— 在getInstance 获取实例对象使，才new对象</p>
+</blockquote>
+<h3 id="饿汉模式"><a href="#饿汉模式" class="headerlink" title="饿汉模式"></a>饿汉模式</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public class Singleton &#123;</span><br><span class="line">    private void Singleton() &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private static Singleton instance = new Singleton();</span><br><span class="line"></span><br><span class="line">    public static Singleton getInstance() &#123;</span><br><span class="line">        return instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="懒汉模式"><a href="#懒汉模式" class="headerlink" title="懒汉模式"></a>懒汉模式</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public class Singleton &#123;</span><br><span class="line">    private void Singleton() &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private static Singleton instance;</span><br><span class="line"></span><br><span class="line">    public static Singleton getInstance() &#123;</span><br><span class="line">        if (instance == null) &#123;</span><br><span class="line">            instance = new Singleton();</span><br><span class="line">        &#125;</span><br><span class="line">        return instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="单例模式使用问题"><a href="#单例模式使用问题" class="headerlink" title="单例模式使用问题"></a>单例模式使用问题</h2><h3 id="资源浪费"><a href="#资源浪费" class="headerlink" title="资源浪费"></a>资源浪费</h3><blockquote>
+<p>饿汉模式 —— 存在资源浪费问题，客户端一直不用这个对象咋办，但是饿汉模式不管，加载类就构造了单例，占用了资源。<br>懒汉模式就不存在资源浪费。</p>
+</blockquote>
+<h3 id="多线程安全问题"><a href="#多线程安全问题" class="headerlink" title="多线程安全问题"></a>多线程安全问题</h3><blockquote>
+<p>饿汉模式 —— 是线程安全的，加载类就构造了单例对象。<br>懒汉模式 —— 是线程不安全，单例对象可能null，加同步锁。</p>
+</blockquote>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public static synchronized Singleton getInstance() &#123;</span><br><span class="line">    if (instance == null) &#123;</span><br><span class="line">        instance = new Singleton();</span><br><span class="line">    &#125;</span><br><span class="line">    return instance;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public static Singleton getInstance() &#123;</span><br><span class="line">    synchronized (Singleton.class) &#123;</span><br><span class="line">        if (instance == null) &#123;</span><br><span class="line">            instance = new Singleton();</span><br><span class="line">        &#125;</span><br><span class="line">        return instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="多线程性能"><a href="#多线程性能" class="headerlink" title="多线程性能"></a>多线程性能</h4><p>上面“懒汉模式”模式确实线程安全了，但是每次去执行getInstace方法都会受到同步锁的影响，运行的效率会降低</p>
+<blockquote>
+<p>解决方法专有名词：双重锁定<br>Double Check Lock（DCL）</p>
+</blockquote>
+<p>就是先判断一下</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public static Singleton getInstance() &#123;</span><br><span class="line">    if (instance == null) &#123;</span><br><span class="line">        synchronized (Singleton.class) &#123;</span><br><span class="line">            if (instance == null) &#123;</span><br><span class="line">                instance = new Singleton();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return instance;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>一些奇葩方法：请查看<a href="https://segmentfault.com/a/1190000015924144?utm_source=tag-newest" target="_blank" rel="noopener">Android中的设计模式之单例模式</a></p>
+<ul>
+<li><strong>静态内部类单例模式</strong></li>
+<li><strong>枚举单例</strong></li>
+<li><strong>使用容器实现单例模式</strong></li>
+</ul>
+</blockquote>
+<h2 id="Android中单例模式"><a href="#Android中单例模式" class="headerlink" title="Android中单例模式"></a>Android中单例模式</h2><h3 id="InputMethodManager-java"><a href="#InputMethodManager-java" class="headerlink" title="InputMethodManager.java"></a>InputMethodManager.java</h3><p><a href="http://androidxref.com/9.0.0_r3/xref/frameworks/base/core/java/android/view/inputmethod/InputMethodManager.java" target="_blank" rel="noopener">xref: /frameworks/base/core/java/android/view/inputmethod/InputMethodManager.java</a><br><img src="https://img-blog.csdnimg.cn/20190302025359531.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIzNDUyMzg1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h2><p>guolin: <a href="https://blog.csdn.net/guolin_blog/article/details/8860649" target="_blank" rel="noopener">Java设计模式透析之 —— 单例(Singleton)</a><br>segmentfault: <a href="https://segmentfault.com/t/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F" target="_blank" rel="noopener">标签 / 单例模式 / 标签动态</a><br>百度百科： <a href="https://baike.baidu.com/item/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/5946627?fr=aladdin" target="_blank" rel="noopener">单例模式</a></p>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/Java/">Java</a>, <a class="has-link-grey -link" href="/tags/设计模式/">设计模式</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div class="social-share" data-initialized="true">
+    <a href="#" class="social-share-icon icon-wechat"></a>
+    <a href="#" class="social-share-icon icon-qq"></a>
+    <a href="#" class="social-share-icon icon-qzone"></a>
+    <a href="#" class="social-share-icon icon-weibo"></a>
+    <a href="#" class="social-share-icon icon-facebook"></a>
+    <a href="#" class="social-share-icon icon-google"></a>
+</div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css">
+<script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
+        
     </div>
 </div>
 
 
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/04/02/JAVA六大设计原则 和 23种设计模式/">
+                <span class="level-item">JAVA六大设计原则 和 23种设计模式</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">评论</h3>
+        
+<div id="valine-thread" class="content"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#valine-thread' ,
+        notify: false,
+        verify: false,
+        app_id: 'W4nIjizRfXDBQKOYrrg1pVw6-gzGzoHsz',
+        app_key: 'ETPjN9lCHIobJ4sHksV5beQG',
+        placeholder: '欢迎探讨评论 ... ...'
+    });
+</script>
+
+    </div>
+</div>
 </div>
                 
 
@@ -915,7 +1029,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/xhbruce-logo.png" alt="许浑的博客" height="28">
+                    <img src="/images/xhbruce-logo.png" alt="Java设计模式 —— 单例模式(Singleton)" height="28">
                 
                 </a>
                 <p class="is-size-7">
