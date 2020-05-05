@@ -192,7 +192,7 @@
 <h2 id="迪米特原则"><a href="#迪米特原则" class="headerlink" title="迪米特原则"></a>迪米特原则</h2><p><strong>迪米特原则又叫最少知道原则，核心思想是低耦合，高内聚。</strong><br>迪米特原则宗旨是弱化代码（通常指类）之间的依赖关系。</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>六大设计原则是代码设计的基本原则。设计原则规范了开发人员如何去设计和实现代码，来提高程序的规范性、可读性、扩展性和维护性。</p>
 <h1 id="JAVA23种设计模式"><a href="#JAVA23种设计模式" class="headerlink" title="JAVA23种设计模式"></a>JAVA23种设计模式</h1><p>三个类型:创建型、结构型和行为型</p>
-<p><img src="C:\Users\VULCAN\Desktop\java_23种设计模式图片.png" alt="java_23种设计模式图片"></p>
+<p><img src="/2019/04/02/JAVA六大设计原则 和 23种设计模式/Users\VULCAN\Desktop\java_23种设计模式图片.png" alt="java_23种设计模式图片"></p>
 <h2 id="创建型有："><a href="#创建型有：" class="headerlink" title="创建型有："></a>创建型有：</h2><p>一、Singleton，单例模式：保证一个类只有一个实例，并提供一个访问它的全局访问点</p>
 <p>二、Abstract Factory，抽象工厂：提供一个创建一系列相关或相互依赖对象的接口，而无须指定它们的具体类。<br>三、Factory Method，工厂方法：定义一个用于创建对象的接口，让子类决定实例化哪一个类，Factory Method使一个类的实例化延迟到了子类。</p>
 <p>四、Builder，建造模式：将一个复杂对象的构建与他的表示相分离，使得同样的构建过程可以创建不同的表示。</p>
@@ -275,18 +275,19 @@
     <div class="card-content">
         <h3 class="title is-5 has-text-weight-normal">评论</h3>
         
-<div id="valine-thread" class="content"></div>
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<div id="comment-container"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.4.1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.4.1/dist/gitalk.min.js"></script>
 <script>
-    new Valine({
-        el: '#valine-thread' ,
-        notify: false,
-        verify: false,
-        app_id: 'W4nIjizRfXDBQKOYrrg1pVw6-gzGzoHsz',
-        app_key: 'ETPjN9lCHIobJ4sHksV5beQG',
-        placeholder: '欢迎探讨评论 ... ...'
-    });
+    var gitalk = new Gitalk({
+        clientID: 'dc30f5b06621eeaf56fc',
+        clientSecret: '4b2f43d9198ae995ec2e1cbb54f9be1416716dd6',
+        id: 'de4d2830ca5288832f4d2ba90580a89e',
+        repo: 'https://github.com/xhBruce/xhBruce.github.io',
+        owner: 'xhBruce',
+        admin: ["xhBruce"]
+    })
+    gitalk.render('comment-container')
 </script>
 
     </div>
@@ -336,7 +337,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        9
+                        10
                     </p>
                 </div>
             </div>
@@ -499,7 +500,7 @@
                 <span class="level-item">Java</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">2</span>
+                <span class="level-item tag">3</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/bat/">
@@ -529,7 +530,7 @@
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/ChkBugReport/" style="font-size: 20px;">ChkBugReport</a> <a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/STS/" style="font-size: 10px;">STS</a> <a href="/tags/bat/" style="font-size: 10px;">bat</a> <a href="/tags/个人网站/" style="font-size: 10px;">个人网站</a> <a href="/tags/设计模式/" style="font-size: 20px;">设计模式</a>
+        <a href="/tags/ChkBugReport/" style="font-size: 15px;">ChkBugReport</a> <a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/STS/" style="font-size: 10px;">STS</a> <a href="/tags/bat/" style="font-size: 10px;">bat</a> <a href="/tags/个人网站/" style="font-size: 10px;">个人网站</a> <a href="/tags/设计模式/" style="font-size: 20px;">设计模式</a>
     </div>
 </div>
 
@@ -543,6 +544,25 @@
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/04/13/factory-pattern_abstract-factory-pattern/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt=" Java设计模式  —— 工厂方法(Factory Method)模式 、抽象工厂（Abstract Factory）模式">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-12T16:17:00.000Z">2019-04-13</time></div>
+                    <a href="/2019/04/13/factory-pattern_abstract-factory-pattern/" class="has-link-black-ter is-size-6"> Java设计模式  —— 工厂方法(Factory Method)模式 、抽象工厂（Abstract Factory）模式</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Java/">Java</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -620,25 +640,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/01/06/chcp 修改显示格式/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt=" chcp 修改显示格式		">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-05T17:33:10.000Z">2019-01-06</time></div>
-                    <a href="/2019/01/06/chcp 修改显示格式/" class="has-link-black-ter is-size-6"> chcp 修改显示格式		</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/bat/">bat</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -659,7 +660,7 @@
                     <span class="level-item">四月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">2</span>
+                    <span class="level-item tag">3</span>
                 </span>
             </a>
         </li>
@@ -742,7 +743,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Java/">
                         <span class="tag">Java</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">3</span>
                     </a>
                 </div>
                 
@@ -770,7 +771,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/设计模式/">
                         <span class="tag">设计模式</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">3</span>
                     </a>
                 </div>
                 
@@ -799,6 +800,25 @@
         
         <article class="media">
             
+            <a href="/2019/04/13/factory-pattern_abstract-factory-pattern/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt=" Java设计模式  —— 工厂方法(Factory Method)模式 、抽象工厂（Abstract Factory）模式">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-12T16:17:00.000Z">2019-04-13</time></div>
+                    <a href="/2019/04/13/factory-pattern_abstract-factory-pattern/" class="has-link-black-ter is-size-6"> Java设计模式  —— 工厂方法(Factory Method)模式 、抽象工厂（Abstract Factory）模式</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Java/">Java</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/04/08/singleton/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="Java设计模式 —— 单例模式(Singleton)">
@@ -873,25 +893,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/01/06/chcp 修改显示格式/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt=" chcp 修改显示格式		">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-05T17:33:10.000Z">2019-01-06</time></div>
-                    <a href="/2019/01/06/chcp 修改显示格式/" class="has-link-black-ter is-size-6"> chcp 修改显示格式		</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/bat/">bat</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -912,7 +913,7 @@
                     <span class="level-item">四月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">2</span>
+                    <span class="level-item tag">3</span>
                 </span>
             </a>
         </li>
@@ -995,7 +996,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Java/">
                         <span class="tag">Java</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">3</span>
                     </a>
                 </div>
                 
@@ -1023,7 +1024,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/设计模式/">
                         <span class="tag">设计模式</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">3</span>
                     </a>
                 </div>
                 
@@ -1048,7 +1049,7 @@
                 
                 </a>
                 <p class="is-size-7">
-                &copy; 2019 xhBruce&nbsp;
+                &copy; 2020 xhBruce&nbsp;
                 Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
                 
                 <br>
